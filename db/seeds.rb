@@ -8,7 +8,6 @@
 
 require 'faker'
 
-
 User.destroy_all
 Yacht.destroy_all
 Booking.destroy_all
@@ -36,3 +35,16 @@ end
 4.times do
   User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password: Faker::Internet.password(8))
 end
+
+Booking.create!(
+  user: User.all.sample,
+  yacht: Yacht.all.sample,
+  start_date: "2018-08-15",
+  end_date: "2018-08-18"
+  )
+
+
+
+
+
+
