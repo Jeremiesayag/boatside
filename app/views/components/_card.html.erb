@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <% @yachts.each do |yacht|  %>
+      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <br>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+          url('<%= image_path '1.jpeg' %>')">
+          <div class="card-category">
+            <%= yacht.boat_type %>
+          </div>
+          <div class="card-description">
+            <h2><%= yacht.name %></h2>
+          </div>
+            <%= link_to yacht.name, yacht_path(yacht), class: "card-link" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
