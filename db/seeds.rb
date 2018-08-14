@@ -17,7 +17,7 @@ Booking.destroy_all
 
 
   2.times do
-    Yacht.create!(name: Faker::StarWars.vehicle, location: Faker::Address.city, boat_type: ["Houseboat", "Catamaran", "Sailboat", "Speedboat", "Motor boat"].sample, user: user)
+    Yacht.create!(name: Faker::StarWars.vehicle, location: ["Marseille", "Tel Aviv", "New York", "Miami", "Los Angeles", "Sydney"].sample, boat_type: ["Houseboat", "Catamaran", "Sailboat", "Speedboat", "Motor boat"].sample, user: user)
   end
 end
 
