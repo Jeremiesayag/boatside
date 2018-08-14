@@ -1,7 +1,9 @@
-<h1>Search for a yacht</h1>
+
+<div class="banner text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'background.jpeg' %>');">
 <%= form_tag yachts_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
     placeholder: "Search for a yacht"%>
 <% end %>
+</div>
