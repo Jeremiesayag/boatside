@@ -41,3 +41,8 @@ class YachtsController < ApplicationController
     params.require(:yacht).permit(:name, :location, :boat_type)
   end
 end
+
+
+# def article_params
+#   params.require(:article).permit(:title, :body, :photo)
+# end
