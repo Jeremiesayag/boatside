@@ -17,6 +17,15 @@ class YachtsController < ApplicationController
   end
 
   def create
+    @yacht = Yacht.new(yacht_params)
+    @yacht.user = current_user
+
+    if @yacht.save
+     redirect_to yacht_path(@yacht)
+   else
+     raise
+     render :new
+   end
   end
 
   def edit
@@ -26,5 +35,9 @@ class YachtsController < ApplicationController
   end
 
   def destroy
+  end
+
+  def yacht_params
+    params.require(:yacht).permit(:name, :location, :boat_type)
   end
 end
