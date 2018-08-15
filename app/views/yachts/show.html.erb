@@ -4,7 +4,7 @@
   <div class="content-show">
     <div class="show-card">
       <div class="image-here-boat">
-        <%= image_tag  "yachttest1.jpg", id: "image-show"%>
+        <%= cl_image_tag @yacht.photo, height: 300, width: 400, crop: :fill %>
       </div>
       <div class="characteristic">
         <dl class="dl-horizontal">

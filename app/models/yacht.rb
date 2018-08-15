@@ -11,4 +11,6 @@ class Yacht < ApplicationRecord
     using: {
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }
+
+  mount_uploader :photo, PhotoUploader
 end
