@@ -4,24 +4,29 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @bookings = Booking.find(params[:id])
+    @booking = Booking.find(params[:id])
   end
 
   def new
-    @yacht = Booking.find(params[:yacht_id])
-    @Booking = Booking.new
+    # @booking = Booking.new
+    # @yacht = Yacht.find(params[:id])
   end
 
   def create
     @booking = Booking.new(booking_params)
-    # we need `restaurant_id` to asssociate booking with corresponding restaurant
     @booking.yacht = Yacht.find(params[:yacht_id])
-    @booking.save
+    @booking.user = current_user
+
+     if @booking.save
+      redirect_to booking_path(@booking)
+    else
+      redirect_to yacht_path(@booking.yacht)
+    end
   end
 
   private
 
-  def review_params
+  def booking_params
     params.require(:booking).permit(:start_date, :end_date, :user, :yacht)
   end
 
