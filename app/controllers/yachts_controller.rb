@@ -9,7 +9,7 @@ class YachtsController < ApplicationController
 
   def show
     @booking = Booking.new
-    @yacht = Yacht.find(params[:id])
+    find_yacht
   end
 
   def new
@@ -28,12 +28,26 @@ class YachtsController < ApplicationController
   end
 
   def edit
+    find_yacht
+    @yacht.update
   end
 
   def update
+    find_yacht
+    @yacht.update(yacht_params)
+    redirect_to yachts_path(@yacht)
   end
 
   def destroy
+    find_yacht
+    @yacht.destroy
+    redirect_to yachts_path
+  end
+
+  private
+
+  def find_yacht
+    @yacht = Yacht.find(params[:id])
   end
 
   def yacht_params
