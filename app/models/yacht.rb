@@ -4,6 +4,8 @@ class Yacht < ApplicationRecord
   validates :name, presence: true
   validates :location, presence: true
   validates :boat_type, presence: true
+  
+  mount_uploader :photo, PhotoUploader
 
   include PgSearch
   pg_search_scope :search_by_location_and_boat_type,
@@ -12,5 +14,4 @@ class Yacht < ApplicationRecord
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }
 
-  mount_uploader :photo, PhotoUploader
 end
