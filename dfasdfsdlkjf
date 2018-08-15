@@ -1,0 +1,12 @@
+=> [[32m#<User id: 4, email: "lenorebauch@schusterbarton.co", created_at: "2018-08-14 17:23:46", updated_at: "2018-08-14 17:23:46", first_name: "Wyatt", last_name: "Hackett">[0m,
+ [32m#<User id: 5, email: "clelia@larson.io", created_at: "2018-08-14 17:23:47", updated_at: "2018-08-14 17:23:47", first_name: "Leticia", last_name: "Durgan">[0m,
+ [32m#<User id: 6, email: "randall@klocko.biz", created_at: "2018-08-14 17:23:47", updated_at: "2018-08-14 17:23:47", first_name: "Roxane", last_name: "Rogahn">[0m,
+ [32m#<User id: 7, email: "sungjaskolski@jenkinsokeefe.com", created_at: "2018-08-14 17:23:47", updated_at: "2018-08-14 17:23:47", first_name: "Dale", last_name: "Crona">[0m,
+ [32m#<User id: 8, email: "estrella@abshire.io", created_at: "2018-08-14 17:23:47", updated_at: "2018-08-14 17:23:47", first_name: "Lavada", last_name: "Kris">[0m,
+ [32m#<User id: 9, email: "billsauer@zulaufondricka.net", created_at: "2018-08-14 17:23:47", updated_at: "2018-08-14 17:23:47", first_name: "Damian", last_name: "Bogisich">[0m,
+ [32m#<User id: 10, email: "josuemurazik@kohlerolson.com", created_at: "2018-08-14 17:23:47", updated_at: "2018-08-14 17:23:47", first_name: "Mayme", last_name: "Sporer">[0m,
+ [32m#<User id: 11, email: "carlo@bergewhite.co", created_at: "2018-08-14 17:23:48", updated_at: "2018-08-14 17:23:48", first_name: "Starr", last_name: "Klocko">[0m,
+ [32m#<User id: 12, email: "vedamacgyver@witting.io", created_at: "2018-08-14 17:23:48", updated_at: "2018-08-14 17:23:48", first_name: "Franklin", last_name: "Klein">[0m,
+ [32m#<User id: 13, email: "rickydickinson@kutchromaguera.co", created_at: "2018-08-14 17:23:48", updated_at: "2018-08-14 17:23:48", first_name: "Brandee", last_name: "Doyle">[0m,
+ [32m#<User id: 14, email: "teodorokrajcik@thiel.com", created_at: "2018-08-14 17:23:48", updated_at: "2018-08-14 17:23:48", first_name: "Clara", last_name: "Harris">[0m,
+ [32m#<User id: 15, email: "bob@boats.com", created_at: "2018-08-14 17:24:46", updated_at: "2018-08-15 12:46:32", first_name: nil, last_name: nil>[0m]

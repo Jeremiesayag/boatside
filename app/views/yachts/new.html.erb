@@ -1,0 +1,16 @@
+
+
+<%= simple_form_for [@yacht] do |f| %>
+<%= f.input :name, wrapper: :vertical_collection_inline %>
+<%= f.input :location, wrapper: :vertical_collection_inline %>
+<%= f.select(:boat_type, [['Houseboat', 'Houseboat'],
+                                  ['Catamaran', 'Catamaran'],
+                                  ['Sailboat', 'Sailboat'],
+                                  ['Speedboat', 'Speedboat'],
+                                  ['Motor boat', 'Motor boat']
+                                 ]) %>
+<%= f.input :photo  %>
+<%= f.input :photo_cache, as: :hidden %>
+<%= f.submit "Host Your Yacht", class: "btn btn-primary" %>
+
+<% end %>
