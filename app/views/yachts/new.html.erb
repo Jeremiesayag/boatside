@@ -9,6 +9,8 @@
                                   ['Speedboat', 'Speedboat'],
                                   ['Motor boat', 'Motor boat']
                                  ]) %>
+<%= f.input :photo  %>
+<%= f.input :photo_cache, as: :hidden %>
 <%= f.submit "Host Your Yacht", class: "btn btn-primary" %>
 
 <% end %>

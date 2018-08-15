@@ -23,7 +23,6 @@ class YachtsController < ApplicationController
     if @yacht.save
      redirect_to yacht_path(@yacht)
    else
-     raise
      render :new
    end
   end
@@ -38,11 +37,6 @@ class YachtsController < ApplicationController
   end
 
   def yacht_params
-    params.require(:yacht).permit(:name, :location, :boat_type)
+    params.require(:yacht).permit(:name, :location, :photo, :boat_type)
   end
 end
-
-
-# def article_params
-#   params.require(:article).permit(:title, :body, :photo)
-# end
