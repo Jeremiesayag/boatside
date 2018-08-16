@@ -1,12 +1,20 @@
-
-
-<div class="banner text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'background.jpeg' %>');">
+<div class="banner text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'background.jpg' %>');">
+<div class="banner-content">
+      <h1 style="color:red; font-size:250%" >Boatside</h1>
+      <p style="color:red; font-size:140%;"<p><b>Thinking Vacation. Book a Yacht.</b></p>
 
 <%= form_tag yachts_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
+  <%= text_field_tag :location,
+    params[:location],
     class: "form-control",
-    placeholder: "Search for a yacht"%>
+    placeholder: "City"%>
+  <%= text_field_tag :boat_type,
+    params[:boat_type],
+    class: "form-control",
+    placeholder: "Boat Type"%>
+    <%= submit_tag("Search", :class => "btn btn-warning" ) %>
 <% end %>
+
+
 </div>
 
