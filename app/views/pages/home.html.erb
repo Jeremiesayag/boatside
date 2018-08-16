@@ -1,7 +1,7 @@
 <div class="banner text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'background.jpg' %>');">
 <div class="banner-content">
-      <h1 style="color:red; font-size:250%" >Boatside</h1>
-      <p style="color:red; font-size:140%;"<p><b>Thinking Vacation. Book a Yacht.</b></p>
+      <h1>Boatside</h1>
+      <h3>Thinking Vacation. Book a Yacht.</h3>
 
 <%= form_tag yachts_path, method: :get do %>
   <%= text_field_tag :location,
@@ -12,7 +12,7 @@
     params[:boat_type],
     class: "form-control",
     placeholder: "Boat Type"%>
-    <%= submit_tag("Search", :class => "btn btn-warning" ) %>
+    <%= submit_tag("Search", :class => "button" ) %>
 <% end %>
 
 
