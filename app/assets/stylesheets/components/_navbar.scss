@@ -4,7 +4,7 @@
   background: white;
   opacity: 0.8;
   transition: all 0.3s ease;
-  height: 70px;
+  height: 73px;
   padding: 0px 30px;
   display: flex;
   align-items: center;
@@ -42,7 +42,7 @@
   font-size: 14px;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
+  color: orange;
   text-decoration: none;
 }
 
@@ -76,3 +76,11 @@
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
+
+// .blur-filter {
+//     -webkit-filter: blur(2px);
+//     -moz-filter: blur(2px);
+//     -o-filter: blur(2px);
+//     -ms-filter: blur(2px);
+//     filter: blur(2px);
+// }

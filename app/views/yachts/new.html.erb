@@ -2,8 +2,8 @@
   <div class="row">
     <div class="col-sm-offset-4 col-sm-4">
       <%= simple_form_for [@yacht] do |f| %>
-      <%= f.input :name, wrapper: :vertical_collection_inline %>
-      <%= f.input :location, wrapper: :vertical_collection_inline %>
+      <%= f.input :name %>
+      <%= f.input :location %>
       <%= f.select(:boat_type, [['Houseboat', 'Houseboat'],
                                         ['Catamaran', 'Catamaran'],
                                         ['Sailboat', 'Sailboat'],

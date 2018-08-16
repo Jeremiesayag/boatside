@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
     <% @yachts.each do |yacht|  %>
-    <% random_image = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"].sample %>
+
       <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
         <br>
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-          url(<%= image_path random_image %>);">
+          url(<%= image_path yacht.photo, id: "cloudinary-user" %>);">
           <div class="card-category">
             <%= yacht.boat_type %>
           </div>

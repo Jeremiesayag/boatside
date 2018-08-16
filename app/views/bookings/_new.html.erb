@@ -1,9 +1,13 @@
+<div class="design-form">
+  <%= simple_form_for [@yacht, @booking] do |f| %>
+  <%= f.input :start_date, order: [:day, :month, :year], wrapper: :vertical_collection_inline%>
+  <%= f.input :end_date, order: [:day, :month, :year], wrapper: :vertical_collection_inline %>
+  <div class="centered">
+    <%= f.submit "Book", class: "btn btn-primary" %>
+  </div>
+  <% end %>
+</div>
 
-<%= simple_form_for [@yacht, @booking] do |f| %>
-<%= f.input :start_date, wrapper: :vertical_collection_inline%>
-<%= f.input :end_date, wrapper: :vertical_collection_inline %>
-<%= f.submit "Book", class: "btn btn-primary" %>
-<% end %>
 
 
 
