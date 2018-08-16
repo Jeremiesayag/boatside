@@ -3,9 +3,7 @@
 
   <div class="content-show">
     <div class="show-card">
-      <div class="image-here-boat">
-        <%= cl_image_tag @yacht.photo, height: 300, width: 400, crop: :fill %>
-      </div>
+      <%= cl_image_tag @yacht.photo, id: "cloudinary-user" %>
       <div class="characteristic">
         <dl class="dl-horizontal">
           <dt>Location</dt>
