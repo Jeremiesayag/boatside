@@ -16,17 +16,7 @@
     <%= submit_tag("Search", :class => "button" ) %>
 <% end %>
 
-  <%= form_tag yachts_path, method: :get do %>
-    <%= text_field_tag :location,
-      params[:location],
-      class: "form-control",
-      placeholder: "City"%>
-    <%= text_field_tag :boat_type,
-      params[:boat_type],
-      class: "form-control",
-      placeholder: "Boat Type"%>
-      <%= submit_tag("Search", :class => "btn btn-warning" ) %>
-  <% end %>
+
   </div>
 </div>
 

@@ -26,7 +26,7 @@ class YachtsController < ApplicationController
     @yacht.user = current_user
 
     if @yacht.save
-     redirect_to yacht_path(@yacht)
+     redirect_to profile_path
    else
      render :new
    end
