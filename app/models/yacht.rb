@@ -1,10 +1,12 @@
 class Yacht < ApplicationRecord
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
   has_many :bookings, dependent: :destroy
   belongs_to :user
   validates :name, presence: true
   validates :location, presence: true
   validates :boat_type, presence: true
-  
+
   mount_uploader :photo, PhotoUploader
 
   include PgSearch
