@@ -1,0 +1,8 @@
+<h2>Your Dashboard</h2>
+
+<h3>Your bookings</h3>
+<ul>
+  <% current_user.bookings.each do |booking| %>
+  <li>In <%= booking.yacht.location %> with <%= link_to booking.yacht.name, yacht_path(booking.yacht) %> from <%= booking.start_date %> to <%=booking.end_date %> </li>
+  <% end %>
+</ul>
