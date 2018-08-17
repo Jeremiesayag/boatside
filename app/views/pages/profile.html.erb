@@ -1,23 +1,31 @@
-<div class="dashboard-container">
-  <div class="dashboard-header"><h1>Dashboard</h1></div>
-  <div class="bookings-container">
-    <h3>Your bookings</h3>
-    <ul class="list-group">
-      <% current_user.bookings.each do |booking| %>
-      <li class="list-group-item">In <%= booking.yacht.location %> with <%= link_to booking.yacht.name, yacht_path(booking.yacht) %> from <%= booking.start_date %> to <%=booking.end_date %> </li>
-      <% end %>
-    </ul>
-  </div>
-  <% if current_user.yachts %>
-  <div class="yachts-container">
-      <h3>Your Yachts</h3>
-      <h4><%= link_to "Host today", new_yacht_path, class: "navbar-wagon-item navbar-wagon-link" %></h4>
+<div id="box">
 
+  <div class="dashboard-container">
+    <div class="dashboard-header"></div>
+    <div class="bookings-container">
+      <h3>Your bookings</h3>
       <ul class="list-group">
-        <% current_user.yachts.each do |yacht| %>
-        <li class="list-group-item"><%= link_to yacht.name, yacht_path(yacht) %> | <%= link_to "Delete", yacht_path(yacht) %></li>
+        <% current_user.bookings.each do |booking| %>
+        <li class="list-group-item">
+          <%= link_to bookings_path(current_user.booking) do %>
+            In <b><%= booking.yacht.location %></b> from <%= booking.start_date.strftime("%B %e, %Y at %I:%M %p") %> to <%=booking.end_date.strftime("%B %e, %Y at %I:%M %p") %>
+        <% end %>
+        </li>
         <% end %>
       </ul>
+    </div>
+    <% if current_user.yachts %>
+    <div class="yachts-container">
+        <h3>Your Yachts</h3>
+        <ul class="list-group">
+          <% current_user.yachts.each do |yacht| %>
+          <li class="list-group-item"><%= link_to yacht.name, yacht_path(yacht) %> | <%= link_to "Delete", yacht_path(yacht) %></li>
+          <% end %>
+        </ul>
+        <h4><%= link_to "Host Your Yacht Today", new_yacht_path, class: "navbar-wagon-item navbar-wagon-link" %></h4>
+
+    </div>
+    <% end %>
   </div>
-  <% end %>
+
 </div>
