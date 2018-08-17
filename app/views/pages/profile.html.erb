@@ -22,7 +22,9 @@
           <li class="list-group-item"><%= link_to yacht.name, yacht_path(yacht) %> | <%= link_to "Delete", yacht_path(yacht) %></li>
           <% end %>
         </ul>
-        <h4><%= link_to "Host Your Yacht Today", new_yacht_path, class: "navbar-wagon-item navbar-wagon-link" %></h4>
+        <h4>
+          <%= link_to "Host Your Yacht Today", new_yacht_path, class: "navbar-wagon-item navbar-wagon-link" %>
+        </h4>
 
     </div>
     <% end %>
