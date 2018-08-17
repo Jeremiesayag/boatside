@@ -7,7 +7,8 @@
       <ul class="list-group">
         <% current_user.bookings.each do |booking| %>
         <li class="list-group-item">
-          <%= link_to bookings_path(current_user.booking) do %>
+
+          <%= link_to booking_path(booking.yacht) do %>
             In <b><%= booking.yacht.location %></b> from <%= booking.start_date.strftime("%B %e, %Y at %I:%M %p") %> to <%=booking.end_date.strftime("%B %e, %Y at %I:%M %p") %>
         <% end %>
         </li>
