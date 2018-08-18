@@ -1,13 +1,15 @@
 <div class="design-form">
   <%= simple_form_for [@yacht, @booking] do |f| %>
-  <%= f.input :start_date, order: [:day, :month, :year], wrapper: :vertical_collection_inline%>
+
+  <input type="button" value="Open calendar" onclick="pureJSCalendar.open('dd-MM-yyyy', 20, 30, 1, '2018-5-5', '2019-8-20', 'booking_start_date', 20)" />
+  <input type="button" value="Close calendar" onclick="pureJSCalendar.close()" />
+
+  <%= f.input :start_date, as: :string %>
+  <input type="text" id="txtTest" />
+
   <%= f.input :end_date, order: [:day, :month, :year], wrapper: :vertical_collection_inline %>
   <div class="centered">
     <%= f.submit "Book", class: "btn btn-primary" %>
   </div>
   <% end %>
 </div>
-
-
-
-
