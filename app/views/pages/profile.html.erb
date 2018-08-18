@@ -1,5 +1,5 @@
 <div id="box">
-
+<!-- test -->
   <div class="dashboard-container">
     <div class="dashboard-header"></div>
     <div class="bookings-container">
@@ -7,7 +7,8 @@
       <ul class="list-group">
         <% current_user.bookings.each do |booking| %>
         <li class="list-group-item">
-          <%= link_to bookings_path(current_user.booking) do %>
+
+          <%= link_to booking_path(booking.yacht) do %>
             In <b><%= booking.yacht.location %></b> from <%= booking.start_date.strftime("%B %e, %Y at %I:%M %p") %> to <%=booking.end_date.strftime("%B %e, %Y at %I:%M %p") %>
         <% end %>
         </li>
@@ -22,7 +23,9 @@
           <li class="list-group-item"><%= link_to yacht.name, yacht_path(yacht) %> | <%= link_to "Delete", yacht_path(yacht) %></li>
           <% end %>
         </ul>
-        <h4><%= link_to "Host Your Yacht Today", new_yacht_path, class: "navbar-wagon-item navbar-wagon-link" %></h4>
+        <h4>
+          <%= link_to "Host Your Yacht Today", new_yacht_path, class: "navbar-wagon-item navbar-wagon-link" %>
+        </h4>
 
     </div>
     <% end %>
